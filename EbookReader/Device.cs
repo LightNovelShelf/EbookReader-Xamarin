@@ -44,7 +44,7 @@ namespace EbookReader
         public int GetStatusBarHeight()
         {
             var height = 0;
-            if (Build.VERSION.SdkInt >= BuildVersionCodes.M && Build.VERSION.SdkInt <= BuildVersionCodes.Q)
+            if (Build.VERSION.SdkInt is >= BuildVersionCodes.M and <= BuildVersionCodes.Q)
             {
                 var resourceId = _activity.ApplicationContext.Resources.GetIdentifier(
                     "status_bar_height",

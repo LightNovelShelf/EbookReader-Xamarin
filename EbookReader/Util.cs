@@ -25,7 +25,7 @@ namespace EbookReader
         }
 
         /// <summary>
-        /// 
+        /// 压缩图片
         /// </summary>
         /// <param name="bmp"></param>
         /// <param name="outStream"></param>

@@ -41,7 +41,7 @@ namespace EbookReader
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
-            if (Build.VERSION.SdkInt >= BuildVersionCodes.M && Build.VERSION.SdkInt <= BuildVersionCodes.Q)
+            if (Build.VERSION.SdkInt is >= BuildVersionCodes.M and <= BuildVersionCodes.Q)
             {
                 Window.SetStatusBarColor(Color.Argb(255, 255, 255, 255));
                 Window.DecorView.SystemUiVisibility = (StatusBarVisibility) Android.Views.SystemUiFlags.LightStatusBar;
@@ -74,12 +74,12 @@ namespace EbookReader
             // const string path = "/storage/emulated/0/轻小说/东京暗鸦/东京暗鸦 01.epub";
             if (string.IsNullOrWhiteSpace(name))
             {
-                // WebView.LoadUrl("http://192.168.10.103:8080");
+                // WebView.LoadUrl("http://172.18.20.250:8080");
                 WebView.LoadUrl("file:///android_asset/dist/index.html");
             }
             else
             {
-                if (Build.VERSION.SdkInt >= BuildVersionCodes.M && Build.VERSION.SdkInt <= BuildVersionCodes.Q)
+                if (Build.VERSION.SdkInt is >= BuildVersionCodes.M and <= BuildVersionCodes.Q)
                 {
                     Window.DecorView.SystemUiVisibility =
                         (StatusBarVisibility) (SystemUiFlags.Fullscreen | SystemUiFlags.LayoutStable |
@@ -88,7 +88,7 @@ namespace EbookReader
                     Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
                 }
 
-                // WebView.LoadUrl($"http://192.168.10.103:8080/#/read/{Uri.Encode(name)}");
+                // WebView.LoadUrl($"http://172.18.20.250:8080/#/read/{Uri.Encode(name)}");
                 WebView.LoadUrl($"file:///android_asset/dist/index.html#/read/{Uri.Encode(name)}");
             }
 

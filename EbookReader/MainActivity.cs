@@ -63,6 +63,7 @@ namespace EbookReader
             webSetting.AllowFileAccessFromFileURLs = true;
             WebView.AddJavascriptInterface(new Device(this), "device");
             WebView.SetWebViewClient(new MyWebViewClient());
+            WebView.SetWebChromeClient(new MyWebChromeClient(this));
 
             // var path = Intent?.GetStringExtra("path");
             string name = null;
@@ -74,7 +75,7 @@ namespace EbookReader
             // const string path = "/storage/emulated/0/轻小说/东京暗鸦/东京暗鸦 01.epub";
             if (string.IsNullOrWhiteSpace(name))
             {
-                // WebView.LoadUrl("http://172.18.20.250:8080");
+                // WebView.LoadUrl("http://192.168.10.103:8080");
                 WebView.LoadUrl("file:///android_asset/dist/index.html");
             }
             else
@@ -88,7 +89,7 @@ namespace EbookReader
                     Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
                 }
 
-                // WebView.LoadUrl($"http://172.18.20.250:8080/#/read/{Uri.Encode(name)}");
+                // WebView.LoadUrl($"http://192.168.10.103:8080/#/read/{Uri.Encode(name)}");
                 WebView.LoadUrl($"file:///android_asset/dist/index.html#/read/{Uri.Encode(name)}");
             }
 
@@ -158,7 +159,7 @@ namespace EbookReader
                     }
                     case 4:
                     {
-                        WebView.EvaluateJavascript("moveToFirst()", null);
+                        WebView.EvaluateJavascript("moveToFirst(0)", null);
                         break;
                     }
                 }

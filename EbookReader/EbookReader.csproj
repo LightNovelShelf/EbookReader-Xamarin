@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="Device.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MyWebChromeClient.cs" />
     <Compile Include="MyWebViewClient.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -132,21 +133,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\css\0eb2b5a72b36373bed5010c3c9aba18d.css" />
-    <AndroidAsset Include="Assets\dist\css\app.0e89eef2.css" />
-    <AndroidAsset Include="Assets\dist\css\chunk-26317840.c1df68da.css" />
-    <AndroidAsset Include="Assets\dist\css\chunk-61480d20.16d11e9a.css" />
-    <AndroidAsset Include="Assets\dist\css\chunk-717c9a05.01ec36f6.css" />
-    <AndroidAsset Include="Assets\dist\css\chunk-vendors.1c961ea9.css" />
     <AndroidAsset Include="Assets\dist\favicon.ico" />
-    <AndroidAsset Include="Assets\dist\img\bg-paper.b2c90955.jpg" />
     <AndroidAsset Include="Assets\dist\index.html" />
-    <AndroidAsset Include="Assets\dist\js\app.a8560d23.js" />
-    <AndroidAsset Include="Assets\dist\js\chunk-26317840.353da4ef.js" />
-    <AndroidAsset Include="Assets\dist\js\chunk-2d21a3d2.2565d7a4.js" />
-    <AndroidAsset Include="Assets\dist\js\chunk-61480d20.b141a6e6.js" />
-    <AndroidAsset Include="Assets\dist\js\chunk-717c9a05.0557d691.js" />
-    <AndroidAsset Include="Assets\dist\js\chunk-vendors.e19ec25a.js" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EbookReader", "EbookReader\EbookReader.csproj", "{8B3B7DF4-AB8B-4EBA-808D-A7792BAABF54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wuyu.Epub", "..\..\..\RiderProjects\EpubBook\Wuyu.Epub\Wuyu.Epub.csproj", "{C7DFE33F-2200-4D53-9525-8177DC2ED549}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wuyu.Epub", "..\EpubBook\Wuyu.Epub\Wuyu.Epub.csproj", "{37279059-3533-4128-853D-1271C33CDC39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,10 @@ Global
 		{8B3B7DF4-AB8B-4EBA-808D-A7792BAABF54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B3B7DF4-AB8B-4EBA-808D-A7792BAABF54}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8B3B7DF4-AB8B-4EBA-808D-A7792BAABF54}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{C7DFE33F-2200-4D53-9525-8177DC2ED549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C7DFE33F-2200-4D53-9525-8177DC2ED549}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C7DFE33F-2200-4D53-9525-8177DC2ED549}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C7DFE33F-2200-4D53-9525-8177DC2ED549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37279059-3533-4128-853D-1271C33CDC39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37279059-3533-4128-853D-1271C33CDC39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37279059-3533-4128-853D-1271C33CDC39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37279059-3533-4128-853D-1271C33CDC39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

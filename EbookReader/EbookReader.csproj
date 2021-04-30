@@ -127,31 +127,28 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\RiderProjects\EpubBook\Wuyu.Epub\Wuyu.Epub.csproj">
-      <Project>{c7dfe33f-2200-4d53-9525-8177dc2ed549}</Project>
+    <ProjectReference Include="..\..\EpubBook\Wuyu.Epub\Wuyu.Epub.csproj">
+      <Project>{37279059-3533-4128-853d-1271c33cdc39}</Project>
       <Name>Wuyu.Epub</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\img\bg-paper.b2c90955.jpg" />
+    <AndroidAsset Include="Assets\dist\js\app.22e9e60f.js" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\app.249c75bd.js" />
+    <AndroidAsset Include="Assets\dist\js\chunk-00babe14.9063cf64.js" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-00babe14.3a6d2de6.js" />
+    <AndroidAsset Include="Assets\dist\js\chunk-0356d04c.1e4945ef.js" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-2d21a3d2.57451b35.js" />
+    <AndroidAsset Include="Assets\dist\js\chunk-168defd1.2bc3001a.js" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-7621de6d.40225a62.js" />
+    <AndroidAsset Include="Assets\dist\js\chunk-2d21a3d2.055ddcc8.js" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-f4fc9c34.bd201dba.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-vendors.d181ae6e.js" />
+    <AndroidAsset Include="Assets\dist\js\chunk-vendors.6ae06cf1.js" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\dist\favicon.ico" />
@@ -160,22 +157,25 @@
     <AndroidAsset Include="Assets\dist\index.html" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\css\0eb2b5a72b36373bed5010c3c9aba18d.css" />
+    <AndroidAsset Include="Assets\dist\css\app.0e89eef2.css" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\css\app.0e89eef2.css" />
+    <AndroidAsset Include="Assets\dist\css\c7f01704043f539c4949008a6a605c36.css" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\dist\css\chunk-00babe14.0f105133.css" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\css\chunk-7621de6d.2687f39e.css" />
+    <AndroidAsset Include="Assets\dist\css\chunk-0356d04c.af7fc11b.css" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\css\chunk-f4fc9c34.bf604cf5.css" />
+    <AndroidAsset Include="Assets\dist\css\chunk-168defd1.d9eec2e9.css" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\dist\css\chunk-vendors.1c961ea9.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\img\bg-paper.b2c90955.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

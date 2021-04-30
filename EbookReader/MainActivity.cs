@@ -47,7 +47,7 @@ namespace EbookReader
             if (Build.VERSION.SdkInt is >= BuildVersionCodes.M and <= BuildVersionCodes.Q)
             {
                 Window.SetStatusBarColor(Color.Argb(255, 255, 255, 255));
-                Window.DecorView.SystemUiVisibility = (StatusBarVisibility) Android.Views.SystemUiFlags.LightStatusBar;
+                Window.DecorView.SystemUiVisibility = (StatusBarVisibility)SystemUiFlags.LightStatusBar;
             }
             else
             {

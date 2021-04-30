@@ -27,12 +27,15 @@ using Uri = Android.Net.Uri;
 namespace EbookReader
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [IntentFilter(new[] {Intent.ActionView},
+        Categories = new[] {Intent.CategoryBrowsable, Intent.CategoryDefault}, DataSchemes = new[] {"file", "content"},
+        DataMimeType = "application/epub+zip")]
     public class MainActivity : AppCompatActivity
     {
         private readonly string[] _permissionsStorage = {Manifest.Permission.ReadExternalStorage};
         private const int RequestPermissionCode = 1;
         public WebView WebView;
-        public List<string> Back = new List<string>();
+        public List<string> Back = new();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -72,10 +75,9 @@ namespace EbookReader
                 name = this.GetFileName(Intent);
             }
 
-            // const string path = "/storage/emulated/0/轻小说/东京暗鸦/东京暗鸦 01.epub";
             if (string.IsNullOrWhiteSpace(name))
             {
-                // WebView.LoadUrl("http://192.168.10.103:8080");
+                //WebView.LoadUrl("http://172.18.20.250:8080");
                 WebView.LoadUrl("file:///android_asset/dist/index.html");
             }
             else
@@ -89,7 +91,7 @@ namespace EbookReader
                     Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
                 }
 
-                // WebView.LoadUrl($"http://192.168.10.103:8080/#/read/{Uri.Encode(name)}");
+                //WebView.LoadUrl($"http://172.18.20.250:8080/#/read/{Uri.Encode(name)}");
                 WebView.LoadUrl($"file:///android_asset/dist/index.html#/read/{Uri.Encode(name)}");
             }
 
@@ -104,7 +106,7 @@ namespace EbookReader
             {
                 if (Back.Any())
                 {
-                    WebView.EvaluateJavascript($"back('{Back.Last()}')",null);
+                    WebView.EvaluateJavascript($"back('{Back.Last()}')", null);
                     return true;
                 }
 
@@ -114,6 +116,7 @@ namespace EbookReader
                     return true;
                 }
             }
+
             return base.OnKeyUp(keyCode, e);
         }
 
@@ -139,7 +142,17 @@ namespace EbookReader
                     {
                         var path = data?.GetPath();
                         var name = this.GetFileName(data);
-                        WebView.EvaluateJavascript($"addToBook('{path}','{name}')", null);
+
+                        if (data.HasExtra("progress"))
+                        {
+                            var progress = data.GetDoubleExtra("progress", 0);
+                            WebView.EvaluateJavascript($"addToBook('{path}','{name}',{progress})", null);
+                        }
+                        else
+                        {
+                            WebView.EvaluateJavascript($"addToBook('{path}','{name}',undefined)", null);
+                        }
+
                         break;
                     }
                     case 3:
@@ -159,7 +172,16 @@ namespace EbookReader
                     }
                     case 4:
                     {
-                        WebView.EvaluateJavascript("moveToFirst(0)", null);
+                        if (data.HasExtra("progress"))
+                        {
+                            var progress = data.GetDoubleExtra("progress", 0);
+                            WebView.EvaluateJavascript($"moveToFirst({progress})", null);
+                        }
+                        else
+                        {
+                            WebView.EvaluateJavascript($"moveToFirst(undefined)", null);
+                        }
+
                         break;
                     }
                 }
@@ -192,6 +214,7 @@ namespace EbookReader
                     jsonObj.Put("book_path", path);
                     jsonObj.Put("book_cover", path.Md5());
                     jsonObj.Put("add_time", currentTime);
+                    jsonObj.Put("read_progress", 0);
                     result.Put(jsonObj);
                 }
 
@@ -229,15 +252,10 @@ namespace EbookReader
             {
                 if (!Environment.IsExternalStorageManager)
                 {
-                    var callIntent = new Android.Content.Intent(Settings.ActionManageAllFilesAccessPermission);
+                    var callIntent = new Intent(Settings.ActionManageAllFilesAccessPermission);
                     StartActivity(callIntent);
                 }
             }
-        }
-
-        private void GetPath(Intent intent)
-        {
-            var uri = intent.Data;
         }
 
         private void LoadData(Intent intent)

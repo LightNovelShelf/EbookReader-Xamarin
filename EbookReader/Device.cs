@@ -164,6 +164,14 @@ namespace EbookReader
         }
 
         [JavascriptInterface]
+        [Export("setProgress")]
+        public void SetProgress(int num)
+        {
+            Log.Debug("SetProgress", num.ToString());
+            _activity.Intent.PutExtra("progress", num / 10.0);
+        }
+        
+        [JavascriptInterface]
         [Export("setLight")]
         public void SetLight()
         {

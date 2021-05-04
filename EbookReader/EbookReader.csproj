@@ -133,30 +133,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\app.22e9e60f.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-00babe14.9063cf64.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-0356d04c.1e4945ef.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-168defd1.2bc3001a.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-2d21a3d2.055ddcc8.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-vendors.6ae06cf1.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\dist\favicon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\dist\index.html" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\dist\css\app.0e89eef2.css" />
   </ItemGroup>
   <ItemGroup>
@@ -169,13 +145,37 @@
     <AndroidAsset Include="Assets\dist\css\chunk-0356d04c.af7fc11b.css" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\css\chunk-168defd1.d9eec2e9.css" />
+    <AndroidAsset Include="Assets\dist\css\chunk-c2cc4e0e.5cea3829.css" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\dist\css\chunk-vendors.1c961ea9.css" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\dist\img\bg-paper.b2c90955.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\app.0901d1c3.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-00babe14.9063cf64.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-0356d04c.1e4945ef.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-2d21a3d2.055ddcc8.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-c2cc4e0e.765f7132.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-vendors.6ae06cf1.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\index.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

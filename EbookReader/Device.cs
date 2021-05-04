@@ -1,19 +1,16 @@
 ﻿using Android.App;
-using Android.OS;
-using Android.Views;
-using Android.Widget;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Android.Content;
 using Android.Graphics;
+using Android.OS;
 using Android.Util;
+using Android.Views;
 using Android.Webkit;
+using Android.Widget;
 using Java.Interop;
+using System;
+using System.Diagnostics.CodeAnalysis;
+using System.IO;
+using System.Threading.Tasks;
 using Wuyu.Epub;
 using Uri = Android.Net.Uri;
 
@@ -65,21 +62,23 @@ namespace EbookReader
         public string ReadFile(string path)
         {
             Log.Info("Path", path);
+            var fileName = path.Md5() + ".epub";
+            var fullPath = $"{GetExternalFilesDir("Document")}/{fileName}";
+
             if (path.StartsWith("content://"))
             {
-                var uri = Uri.Parse(path);
-                var stream = _activity.ContentResolver.OpenInputStream(uri);
-                var bytes = new byte[stream.Length];
-                stream.Read(bytes, 0, bytes.Length);
-                stream.Dispose();
-                var result = Base64.EncodeToString(bytes, Base64Flags.NoWrap);
-                return result;
+                using (var stream = _activity.ContentResolver.OpenInputStream(_activity.Intent.Data))
+                {
+                    using var fileStream = new FileStream(fullPath, FileMode.Create);
+                    stream.CopyTo(fileStream);
+                    fileStream.Dispose();
+                }
+                return fullPath;
             }
             else
             {
                 if (path.StartsWith("file://")) path = path[7..];
-                var data = File.ReadAllBytes(path);
-                return Base64.EncodeToString(data, Base64Flags.NoWrap);
+                return path;
             }
         }
 
@@ -161,6 +160,7 @@ namespace EbookReader
         public void SetResultOK()
         {
             _activity.SetResult(Result.Ok, _activity.Intent);
+            _activity.DeleteCache();
         }
 
         [JavascriptInterface]
@@ -252,20 +252,22 @@ namespace EbookReader
 
         [JavascriptInterface]
         [Export("readBook")]
-        public string ReadBook()
+        public void ReadBook()
         {
-            if (_activity.Intent?.Data != null)
+            Task.Run(() =>
             {
-                var data = ReadFileFromUri(_activity.Intent.Data);
-                var path = _activity.Intent.GetPath();
-                _activity.WebView.Post(() =>
+                if (_activity.Intent?.Data != null)
                 {
-                    _activity.WebView.EvaluateJavascript($"loadBook('{path}','{data}')",
-                        null);
-                });
-            }
+                    var path = _activity.Intent.GetPath();
+                    var fullPath = ReadFile(path);
 
-            return null;
+                    _activity.WebView.Post(() =>
+                    {
+                        _activity.WebView.EvaluateJavascript($"loadBook('{path}','{fullPath}')", null);
+                    });
+                }
+
+            });
         }
     }
 }

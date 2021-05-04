@@ -17,6 +17,7 @@ using AndroidX.DocumentFile.Provider;
 using Org.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Environment = Android.OS.Environment;
@@ -35,7 +36,7 @@ namespace EbookReader
         private readonly string[] _permissionsStorage = {Manifest.Permission.ReadExternalStorage};
         private const int RequestPermissionCode = 1;
         public WebView WebView;
-        public List<string> Back = new();
+        public readonly List<string> Back = new();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -47,7 +48,7 @@ namespace EbookReader
             if (Build.VERSION.SdkInt is >= BuildVersionCodes.M and <= BuildVersionCodes.Q)
             {
                 Window.SetStatusBarColor(Color.Argb(255, 255, 255, 255));
-                Window.DecorView.SystemUiVisibility = (StatusBarVisibility)SystemUiFlags.LightStatusBar;
+                Window.DecorView.SystemUiVisibility = (StatusBarVisibility) SystemUiFlags.LightStatusBar;
             }
             else
             {
@@ -77,7 +78,7 @@ namespace EbookReader
 
             if (string.IsNullOrWhiteSpace(name))
             {
-                //WebView.LoadUrl("http://172.18.20.250:8080");
+                //WebView.LoadUrl("http://192.168.10.103:8080/");
                 WebView.LoadUrl("file:///android_asset/dist/index.html");
             }
             else
@@ -91,7 +92,7 @@ namespace EbookReader
                     Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
                 }
 
-                //WebView.LoadUrl($"http://172.18.20.250:8080/#/read/{Uri.Encode(name)}");
+                //WebView.LoadUrl($"http://192.168.10.103:8080/#/read/{Uri.Encode(name)}");
                 WebView.LoadUrl($"file:///android_asset/dist/index.html#/read/{Uri.Encode(name)}");
             }
 
@@ -185,6 +186,21 @@ namespace EbookReader
                         break;
                     }
                 }
+            }
+        }
+
+        public void DeleteCache(string path = default)
+        {
+            if (string.IsNullOrEmpty(path)) path = Intent.GetPath();
+            var fileName = path.Md5() + ".epub";
+            var fullPath = $"{GetExternalFilesDir("Document")}/{fileName}";
+            try
+            {
+                File.Delete(fullPath);
+            }
+            catch (Exception e)
+            {
+                Log.Warn("DeleteCache", e.Message);
             }
         }
 

@@ -151,7 +151,7 @@ namespace EbookReader
                         }
                         else
                         {
-                            WebView.EvaluateJavascript($"addToBook('{path}','{name}',undefined)", null);
+                            WebView.EvaluateJavascript($"addToBook('{path}','{name}',null)", null);
                         }
 
                         break;
@@ -180,7 +180,7 @@ namespace EbookReader
                         }
                         else
                         {
-                            WebView.EvaluateJavascript($"moveToFirst(undefined)", null);
+                            WebView.EvaluateJavascript($"moveToFirst(null)", null);
                         }
 
                         break;

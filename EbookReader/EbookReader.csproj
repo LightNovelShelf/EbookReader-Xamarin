@@ -133,19 +133,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\css\app.0e89eef2.css" />
+    <AndroidAsset Include="Assets\dist\css\app.06ecc598.css" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\dist\css\c7f01704043f539c4949008a6a605c36.css" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\css\chunk-00babe14.0f105133.css" />
+    <AndroidAsset Include="Assets\dist\css\chunk-4445003e.1c0ba983.css" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\css\chunk-0356d04c.af7fc11b.css" />
+    <AndroidAsset Include="Assets\dist\css\chunk-4b095b17.0f105133.css" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\css\chunk-0eed932c.ebb3a4eb.css" />
+    <AndroidAsset Include="Assets\dist\css\chunk-522353e2.f1affb81.css" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\dist\css\chunk-vendors.1c961ea9.css" />
@@ -154,22 +154,22 @@
     <AndroidAsset Include="Assets\dist\img\bg-paper.b2c90955.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\app.45ccc4f1.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-00babe14.9063cf64.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-0356d04c.1e4945ef.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-0eed932c.6393e00a.js" />
+    <AndroidAsset Include="Assets\dist\js\app.7a2c45e8.js" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\dist\js\chunk-2d21a3d2.055ddcc8.js" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-vendors.6ae06cf1.js" />
+    <AndroidAsset Include="Assets\dist\js\chunk-4445003e.54d3cf72.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-4b095b17.834d6c07.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-522353e2.96bb7bc8.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-vendors.1a0d3406.js" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\dist\favicon.ico" />

@@ -221,6 +221,13 @@ namespace EbookReader
         }
 
         [JavascriptInterface]
+        [Export("finish")]
+        public void Finish()
+        {
+            _activity.Finish();
+        }
+
+        [JavascriptInterface]
         [Export("openBook")]
         public void OpenBook(string name, string path)
         {

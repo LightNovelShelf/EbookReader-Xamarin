@@ -145,7 +145,7 @@
     <AndroidAsset Include="Assets\dist\css\chunk-0356d04c.af7fc11b.css" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\css\chunk-c2cc4e0e.5cea3829.css" />
+    <AndroidAsset Include="Assets\dist\css\chunk-0eed932c.ebb3a4eb.css" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\dist\css\chunk-vendors.1c961ea9.css" />
@@ -154,7 +154,7 @@
     <AndroidAsset Include="Assets\dist\img\bg-paper.b2c90955.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\app.0901d1c3.js" />
+    <AndroidAsset Include="Assets\dist\js\app.45ccc4f1.js" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\dist\js\chunk-00babe14.9063cf64.js" />
@@ -163,10 +163,10 @@
     <AndroidAsset Include="Assets\dist\js\chunk-0356d04c.1e4945ef.js" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-2d21a3d2.055ddcc8.js" />
+    <AndroidAsset Include="Assets\dist\js\chunk-0eed932c.6393e00a.js" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-c2cc4e0e.765f7132.js" />
+    <AndroidAsset Include="Assets\dist\js\chunk-2d21a3d2.055ddcc8.js" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\dist\js\chunk-vendors.6ae06cf1.js" />

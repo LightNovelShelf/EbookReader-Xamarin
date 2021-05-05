@@ -71,7 +71,6 @@ namespace EbookReader
                 {
                     using var fileStream = new FileStream(fullPath, FileMode.Create);
                     stream.CopyTo(fileStream);
-                    fileStream.Dispose();
                 }
                 return fullPath;
             }
@@ -82,14 +81,21 @@ namespace EbookReader
             }
         }
 
-        private string ReadFileFromUri(Uri uri)
+        [JavascriptInterface]
+        [Export("readFileBase64")]
+        public void ReadFileBase64(string fullPath)
         {
-            var stream = _activity.ContentResolver.OpenInputStream(uri);
-            var bytes = new byte[stream.Length];
-            stream.Read(bytes, 0, bytes.Length);
-            stream.Dispose();
-            var result = Base64.EncodeToString(bytes, Base64Flags.NoWrap);
-            return result;
+            Task.Run(() =>
+            {
+                var path = _activity.Intent.GetPath();
+                var bytes = File.ReadAllBytes(fullPath);
+                var result = Base64.EncodeToString(bytes, Base64Flags.NoWrap);
+                _activity.WebView.Post(() =>
+                {
+                    _activity.WebView.EvaluateJavascript($"loadBook('{path}','{result}')", null);
+                });
+                return result;
+            });
         }
 
         [JavascriptInterface]

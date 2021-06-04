@@ -139,37 +139,109 @@
     <AndroidAsset Include="Assets\dist\css\c7f01704043f539c4949008a6a605c36.css" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\css\chunk-4445003e.1c0ba983.css" />
+    <AndroidAsset Include="Assets\dist\css\chunk-019ee962.6d94bb3f.css" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\css\chunk-4b095b17.0f105133.css" />
+    <AndroidAsset Include="Assets\dist\css\chunk-32e9da05.b9c3ace8.css" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\css\chunk-522353e2.f1affb81.css" />
+    <AndroidAsset Include="Assets\dist\css\chunk-41ae97bf.b9c3ace8.css" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\css\chunk-vendors.1c961ea9.css" />
+    <AndroidAsset Include="Assets\dist\css\chunk-45b06d88.376019a9.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\css\chunk-488077c8.376019a9.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\css\chunk-5949ee1c.3a5359bd.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\css\chunk-5c381932.10b4bbed.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\css\chunk-77a8ca30.460ac60a.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\css\chunk-7c57a660.6d94bb3f.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\css\chunk-8d152b50.4b110477.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\css\chunk-94a03f0c.aab67a6f.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\css\chunk-adc4d6c6.e34bb746.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\css\chunk-c8025912.0cb98210.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\css\chunk-c953f49a.aab67a6f.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\css\chunk-vendors.bfa97e48.css" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\dist\img\bg-paper.b2c90955.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\app.7a2c45e8.js" />
+    <AndroidAsset Include="Assets\dist\js\app-legacy.3d24ad42.js" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-2d21a3d2.055ddcc8.js" />
+    <AndroidAsset Include="Assets\dist\js\app.60ff62cc.js" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-4445003e.54d3cf72.js" />
+    <AndroidAsset Include="Assets\dist\js\chunk-019ee962-legacy.4a9970f1.js" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-4b095b17.834d6c07.js" />
+    <AndroidAsset Include="Assets\dist\js\chunk-32e9da05-legacy.9ce3aaa2.js" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-522353e2.96bb7bc8.js" />
+    <AndroidAsset Include="Assets\dist\js\chunk-41ae97bf.ded5e878.js" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\dist\js\chunk-vendors.1a0d3406.js" />
+    <AndroidAsset Include="Assets\dist\js\chunk-45b06d88-legacy.39d306df.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-488077c8.7e08ac82.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-5949ee1c-legacy.854071c7.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-5949ee1c.113abd48.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-5c381932.6a29f802.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-77a8ca30-legacy.abf0a908.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-7c57a660.c2e80746.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-8d152b50.369bcaef.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-94a03f0c-legacy.a0b74b13.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-adc4d6c6-legacy.07d9582f.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-c8025912-legacy.4bdf04d5.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-c953f49a.878f2c4e.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-vendors-legacy.6d2c8a24.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\dist\js\chunk-vendors.7856d9e2.js" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\dist\favicon.ico" />

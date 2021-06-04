@@ -78,7 +78,7 @@ namespace EbookReader
 
             if (string.IsNullOrWhiteSpace(name))
             {
-                // WebView.LoadUrl("http://192.168.10.103:8080/");
+                //WebView.LoadUrl("http://192.168.1.3:8080/");
                 WebView.LoadUrl("file:///android_asset/dist/index.html");
             }
             else
@@ -92,7 +92,7 @@ namespace EbookReader
                     Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
                 }
 
-                // WebView.LoadUrl($"http://192.168.10.103:8080/#/read/{Uri.Encode(name)}");
+                //WebView.LoadUrl($"http://192.168.1.3:8080/#/read/{Uri.Encode(name)}");
                 WebView.LoadUrl($"file:///android_asset/dist/index.html#/read/{Uri.Encode(name)}");
             }
 

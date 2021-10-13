@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.FileProviders;
 
 namespace EbookReader.KestrelWebHost
 {
@@ -10,7 +12,10 @@ namespace EbookReader.KestrelWebHost
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSignalR();
+            services.AddSignalR(configure =>
+            {
+                configure.EnableDetailedErrors = true;
+            });
             services.AddCors();
         }
 
@@ -22,12 +27,15 @@ namespace EbookReader.KestrelWebHost
                 .AllowCredentials()
                 .WithExposedHeaders("Content-Disposition"));
 
+            var option = new FileServerOptions { EnableDirectoryBrowsing = true };
+            option.StaticFileOptions.FileProvider = new PhysicalFileProvider(Server.Root);
+            option.StaticFileOptions.ServeUnknownFileTypes = true;
+            app.UseFileServer(option);
+
             app.UseSignalR(route =>
             {
                 route.MapHub<ApiHub>("/api");
             });
-
-            app.Run(WebApp.OnHttpRequest);
         }
     }
 }

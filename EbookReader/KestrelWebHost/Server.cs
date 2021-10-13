@@ -11,32 +11,43 @@ namespace EbookReader.KestrelWebHost
     class Server
     {
         public static IWebHost Host;
-        public static int Port = 5555;
+        public static int Port = 5556;
+        public static string Root;
 
         public static Task CreateServer()
         {
-            // 找到一个没有使用的端口
-            while (InUse(Port))
+            try
             {
-                Port++;
+                // 找到一个没有使用的端口
+                while (InUse(Port))
+                {
+                    Port++;
+                }
+
+                Root = new DirectoryInfo(Path.Join(MainActivity.Activity.ExternalCacheDir.AbsolutePath, "..")).FullName;
+
+                var webHost = new WebHostBuilder()
+                    .ConfigureServices((hostContext, services) =>
+                    {
+                        services.AddSingleton<IHostLifetime, ConsoleLifetimePatch>();
+                    })
+                    .UseKestrel(options =>
+                    {
+                        options.ListenAnyIP(Port);
+                    })
+                    .UseContentRoot(Root)
+                    .UseStartup<Startup>()
+                    .Build();
+
+                Host = webHost;
+
+                return webHost.RunPatchedAsync();
             }
-
-            var webHost = new WebHostBuilder()
-                .ConfigureServices((hostContext, services) =>
-                {
-                    services.AddSingleton<IHostLifetime, ConsoleLifetimePatch>();
-                })
-                .UseKestrel(options =>
-                {
-                    options.ListenAnyIP(Port);
-                })
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseStartup<Startup>()
-                .Build();
-
-            Host = webHost;
-
-            return webHost.RunPatchedAsync();
+            catch (System.Exception e)
+            {
+                System.Console.WriteLine(e.ToString());
+                throw;
+            }
         }
 
         static bool InUse(int port)

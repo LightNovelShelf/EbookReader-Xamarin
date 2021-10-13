@@ -5,6 +5,7 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Provider;
 using Android.Runtime;
+using Android.Views;
 using Android.Webkit;
 using AndroidX.AppCompat.App;
 using AndroidX.Core.App;
@@ -24,6 +25,7 @@ namespace EbookReader
         protected override void OnCreate(Bundle savedInstanceState)
         {
             Activity = this;
+            // 创建Web服务器，这里要注意一下，启动的是Asp.Net Core 2时代的产物，所以各种中间件依赖等不能装太高的版本
             KestrelWebHost.Server.CreateServer();
 
             base.OnCreate(savedInstanceState);
@@ -45,7 +47,7 @@ namespace EbookReader
             //WebView.SetWebViewClient(new MyWebViewClient());
             //WebView.SetWebChromeClient(new MyWebChromeClient(this));
 
-            WebView.LoadUrl("http://10.0.2.2:3000");
+            WebView.LoadUrl("http://10.0.2.2:8080");
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -76,6 +78,21 @@ namespace EbookReader
                     StartActivity(callIntent);
                 }
             }
+        }
+
+        // 后退事件
+        public override bool OnKeyUp(Keycode keyCode, KeyEvent e)
+        {
+            if (keyCode == Keycode.Back && e.Action == KeyEventActions.Up)
+            {
+                if (WebView.CanGoBack())
+                {
+                    WebView.GoBack();
+                    return true;
+                }
+            }
+
+            return base.OnKeyUp(keyCode, e);
         }
     }
 }

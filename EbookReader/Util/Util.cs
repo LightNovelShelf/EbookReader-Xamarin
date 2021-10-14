@@ -76,7 +76,7 @@ namespace EbookReader.Util
             var canvas = new Canvas(result);
             var rect = new Rect(0, 0, width, height);
             canvas.DrawBitmap(bmp, null, rect, null);
-            await result.CompressAsync(Bitmap.CompressFormat.Jpeg, quality, outStream);
+            await result.CompressAsync(Bitmap.CompressFormat.WebpLossy, quality, outStream);
         }
     }
 }

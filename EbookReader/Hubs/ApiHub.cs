@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.SignalR;
 using System;
 using System.IO;
 using System.IO.Compression;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Wuyu.Epub;
@@ -110,7 +111,12 @@ namespace EbookReader.Hubs
                 using var image = BitmapFactory.DecodeStream(coverStream);
                 var coverPath = MainActivity.Activity.GetExternalFilesDir("image").AbsolutePath + "/" + md5;
                 using var fileStream = new FileStream(coverPath, FileMode.Create);
-                await image.CompressBitmapAsync(fileStream, 80, 0.3);
+                double ratio;
+                if (image.Height > 1200) ratio = 0.3;
+                else if (image.Height > 800) ratio = 0.5;
+                else if (image.Height > 600) ratio = 0.7;
+                else ratio = 1;
+                await image.CompressBitmapAsync(fileStream, 100, ratio);
 
                 var coverUrl = coverPath;
                 if (isDev) coverUrl = $"http://127.0.0.1:{KestrelWebHost.Server.Port}/{Path.GetRelativePath(KestrelWebHost.Server.Root, coverPath)}";
@@ -144,6 +150,30 @@ namespace EbookReader.Hubs
             catch (Exception e)
             {
                 return MessageHelp.Error<string[]>(e.Message);
+            }
+        }
+
+        // 扫描Epub并调用Api添加到书架中
+        public async Task<MessageModel> ScanEpub(string path)
+        {
+            try
+            {
+                var files = Directory.GetFiles(path, "*.epub").Select(x => new { id = Guid.NewGuid(), path = x });
+                if (files.Any())
+                {
+                    await Clients.Caller.SendAsync("AddBookGroup", new { id = Guid.NewGuid(), data = files });
+                }
+
+                foreach (var item in Directory.GetDirectories(path))
+                {
+                    await ScanEpub(item);
+                }
+
+                return MessageHelp.Success();
+            }
+            catch (Exception e)
+            {
+                return MessageHelp.Error(e.Message);
             }
         }
     }

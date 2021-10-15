@@ -52,6 +52,12 @@
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <BundleAssemblies>true</BundleAssemblies>
+    <AotAssemblies>true</AotAssemblies>
+    <EnableLLVM>true</EnableLLVM>
+    <AndroidEnableProfiledAot>true</AndroidEnableProfiledAot>
+    <MandroidI18n>
+    </MandroidI18n>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -74,6 +80,45 @@
     <Compile Include="Util\Util.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\Web\fonts\FiraCode-Regular.ea8e3416.woff2" />
+    <AndroidAsset Include="Assets\Web\fonts\LatoLatin-Regular.3cd36578.woff2" />
+    <AndroidAsset Include="Assets\Web\fonts\LatoLatin-Semibold.008763cc.woff2" />
+    <AndroidAsset Include="Assets\Web\Test2\mimetype" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\content.opf" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\toc.ncx" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Fonts\illus1.ttf" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Fonts\illus2.ttf" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Fonts\illus3.ttf" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Fonts\page.ttf" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Fonts\section1.ttf" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Fonts\title.ttf" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Fonts\title2.ttf" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\author.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\backcover.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\contents.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\cover.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\illus1.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\illus2.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\illus3.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\illus4.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\illus5-1.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\illus5.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\message.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\page.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\Section001.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\Section002.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\Section003.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\Section004.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\Section005.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\Section006.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\Section007.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\Section008.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\Section009.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\Section010.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\Section011.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\Section012.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\summary.xhtml" />
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\title.xhtml" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
@@ -135,6 +180,141 @@
       <Project>{37279059-3533-4128-853d-1271c33cdc39}</Project>
       <Name>Wuyu.Epub</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\css\app.724b710a.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\css\chunk-271b60d6.7ce6bdfb.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\css\chunk-5576d9ba.a13472a6.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\css\chunk-e61e036a.a13472a6.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\css\chunk-vendors.b0c17f3f.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\app-legacy.7a9fa573.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\app.3e8cbd33.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-271b60d6-legacy.01cc4562.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-271b60d6.d3e37b41.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-2d0be2df-legacy.e34370b5.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-2d0be2df.e34370b5.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-2d21a3d2-legacy.d6e1d9bd.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-2d21a3d2.9f2eec5d.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-5576d9ba.df513231.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-e61e036a-legacy.7d9c5209.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-vendors-legacy.27a55cbd.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-vendors.c0994db2.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\META-INF\container.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\002.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\003.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\004.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\005.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\006.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\007.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\008.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\009.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\author.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\bc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\co1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\co2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\co3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\co4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\co5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\cover-ch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\cover.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\page1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\page2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Images\t2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Misc\notereplace.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\Test2\OEBPS\Styles\style.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\robots.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

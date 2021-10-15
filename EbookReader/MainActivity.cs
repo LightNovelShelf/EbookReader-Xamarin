@@ -47,7 +47,8 @@ namespace EbookReader
             //WebView.SetWebViewClient(new MyWebViewClient());
             //WebView.SetWebChromeClient(new MyWebChromeClient(this));
 
-            WebView.LoadUrl("http://10.0.2.2:8080");
+            //WebView.LoadUrl("http://10.0.2.2:8080");
+            WebView.LoadUrl($"file:///android_asset/Web/index.html");
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

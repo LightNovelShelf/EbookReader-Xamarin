@@ -1,0 +1,668 @@
+/*預設文本樣式*/
+body{
+	padding: 0%;
+	margin-top: 0%;
+	margin-bottom: 0%;
+	margin-left: 1%;
+	margin-right: 1%;
+	line-height: 130%;
+	text-align: justify;
+}
+h1{
+	font-size: 1.65em;
+	line-height: 120%;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 0.1em;
+	margin-bottom: 0.4em;
+}
+h2{
+	font-size: 1.25em;
+	line-height: 120%;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 0.3em;
+	margin-bottom: 0.5em;
+}
+h3{
+	font-size: 0.95em;
+	line-height: 120%;
+	text-align: center;
+	text-indent: 0em;
+	font-weight: bold;
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+}
+h4{
+	font-size: 1.4em;
+	text-align: center;
+	line-height: 1.2em;
+	text-indent: 0em;
+	font-weight: bold;
+	margin-top: 1em;
+	margin-bottom: 1.5em;
+}
+div{
+	margin: 0px;
+	padding: 0px;
+	text-align: justify;
+}
+p{
+	text-indent: 2em;
+	display: block;
+	line-height: 1.3em;
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
+}
+
+/*圖片相關*/
+.illus{
+	text-indent: 0em;
+	text-align: center;
+}
+.cover{
+	margin: 0em;
+	padding: 0em;
+	text-indent: 0em;
+	text-align: center;
+}
+.coverborder{
+	border-style: none;
+	border-color: #716F71;
+	border-width: 1px;
+}
+
+
+/*預設格式相關樣式*/
+.right{
+	text-indent: 0em;
+	text-align: right;
+}
+.left{
+	text-indent: 0em;
+	text-align: left;
+}
+.center{
+	text-indent: 0em;
+    text-align: center;
+}
+.zin{
+    text-indent: 0em;
+}
+.bold{
+    font-weight: bold;
+}
+.stress{
+	font-weight: bold;
+	font-size: 1.1em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+.author{
+	font-size: 1.2em;
+	text-align: right;
+	font-weight: bold;
+	font-style: italic;
+	margin-right: 1em;
+}
+.dash-break{
+	word-break: break-all;
+	word-wrap: break-word;
+}
+.no-d{
+	text-decoration: none;
+}
+.message{
+	text-indent: 0em;
+	line-height: 1.2em;
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+}
+.meg{
+	font-size: 1.3em;
+	text-indent: 0em;
+	font-weight: bold;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+
+/*文字大小*/
+
+.em04{
+    font-size: 0.4em;
+}
+.em05{
+    font-size: 0.5em;
+}
+.em06{
+    font-size: 0.6em;
+}
+.em065{
+    font-size: 0.65em;
+}
+.em07{
+    font-size: 0.7em;
+}
+.em075{
+    font-size: 0.75em;
+}
+.em08{
+    font-size: 0.8em;
+}
+.em09{
+    font-size: 0.9em;
+}
+.em11{
+    font-size: 1.1em;
+}
+.em12{
+    font-size: 1.2em;
+}
+.em125{
+    font-size: 1.25em;
+}
+.em13{
+    font-size: 1.3em;
+}
+.em14{
+    font-size: 1.4em;
+}
+.em15{
+    font-size: 1.5em;
+}
+.em16{
+    font-size: 1.6em;
+}
+.em17{
+    font-size: 1.7em;
+}
+.em18{
+    font-size: 1.8em;
+}
+.em19{
+    font-size: 1.9em;
+}
+.em20{
+    font-size: 2em;
+}
+.em21{
+    font-size: 2.1em;
+}
+.em22{
+    font-size: 2.2em;
+}
+.em23{
+    font-size: 2.3em;
+}
+.em24{
+    font-size: 2.4em;
+}
+.em25{
+    font-size: 2.5em;
+}
+.em26{
+    font-size: 2.6em;
+}
+.em27{
+    font-size: 2.7em;
+}
+.em28{
+    font-size: 2.8em;
+}
+.em29{
+    font-size: 2.9em;
+}
+.em30{
+    font-size: 3em;
+}
+.em35{
+    font-size: 3.5em;
+}
+.em40{
+    font-size: 4em;
+}
+
+
+/*預設目錄樣式*/
+.contents {
+	text-indent: 0.4em;
+	text-align: left;
+	border-bottom:dotted 1.5px #000;
+	padding-bottom:0.2em;
+}
+.mulu {
+	text-indent: 0em;
+	text-align: center;
+    margin: 0.7em;
+}
+
+.back{
+	background-image: url(../Images/contents.jpg);
+	background-repeat:no-repeat;
+	background-position:top center;
+	background-size:cover;
+}
+.contents1{
+	font-size: 1.3em;
+	padding: 3px 2px 1px 2px;
+	width: 3em;
+	color: #FFF;
+	margin: -1.2em auto 0 2em;
+	border-radius:10px;
+	background-color:#000;
+	text-indent: 0em;
+    text-align: center;
+}
+.contents2{
+	font-size: 1.3em;
+	padding: 2px;
+	width: 3em;
+	color: #FFF;
+	margin: 0 auto -2.3em 4.0em;
+	border-radius:20px;
+	background-color:#000;
+	text-indent: 0em;
+    text-align: center;
+}
+.contents3{
+	color: #000;
+	width: 6.5em;
+	border:3px solid #000;
+	background-color: #FFF;
+	margin: -0.3em auto -0.6em 6.7em;
+	text-indent: 0em;
+    text-align: center;
+	padding:1px 0 0 0;
+}
+.c-box1 {
+	border: 3px solid #000;
+	margin: 0.3em 0;
+	padding: 0.2em 0em 0.1em 0.7em;
+	color: #000;
+	background-color: #FFF;
+    text-indent: 0em;
+	width: 16em;  /*原本16em*/
+}
+.c-box2 {
+	border: 3px solid #777;
+	margin: 0.3em 0;
+	padding: 0.2em 0em 0.1em 0.7em;
+	color: #FFF;
+	background-color: #000;
+    text-indent: 0em;
+	width: 16em;
+}
+.hs {
+	color: #000;
+	text-dacoration: none;
+	padding-right: 0 1em;
+}
+.bs {
+	color: #FFF;
+	text-dacoration: none;
+}
+
+/*圖片允許放大*/
+
+/*
+html代碼：
+
+<div class="duokan-image-single illus"><img alt="圖片名" src="../Images/圖片名.jpg" /></div>
+*/
+
+
+
+/*預設註釋樣式*/
+
+.footnote {
+    height: 1.2em!important;
+    width: auto;
+    border:0;
+}
+.duokan-footnote {
+    height: 1.2em!important;
+    width: auto;
+    border: 0;
+}
+.duokan-footnote-item {
+    text-indent: 0em;
+    font-family: "DK-SONGTI";
+    text-shadow: 0em 0em 0.1em #000000;
+    font-size: 0.9em;
+    text-align: left;
+}
+sup {
+    font-size: 0.75em;
+    line-height: 1.2;
+    vertical-align: super!important;
+}
+/*
+html代碼：
+
+<a class="duokan-footnote no-d" epub:type="noteref" href="#n1" id="A_1"><sup><img alt="note" class="footnote" src="../Images/note.png" /></sup></a>
+
+
+    <aside epub:type="footnote" id="n1">
+      <ol class="duokan-footnote-content">
+        <li class="duokan-footnote-item" id="n1" value="1"></li>
+      </ol>
+    </aside>
+
+代碼說明：
+1. 請將「href="n1"」「id="n1"」「value="1"」這三段代碼中的數字改為該註釋的順序
+例：第3個註釋的該段代碼為「href="n3"」「id="n3"」「value="3"」
+2. 「註：」根據不同情況可以改為其它文字，例如譯者名
+*/
+
+
+/*字型*/
+
+@font-face {
+    font-family: "jp";
+    src: url(../Fonts/jp.ttf);
+}
+.jp{
+    font-family: jp;
+}
+@font-face {
+    font-family: "title";
+    src: url(../Fonts/title.ttf);
+}
+.title{
+    font-family: title;
+}
+@font-face {
+    font-family: "title2";
+    src: url(../Fonts/title2.ttf);
+}
+.title2{
+    font-family: title2;
+}
+@font-face {
+    font-family: "page";
+    src: url(../Fonts/page.ttf);
+}
+.page{
+    font-family: page;
+}
+@font-face {
+    font-family: "illus1";
+    src: url(../Fonts/illus1.ttf);
+}
+.illus1{
+    font-family: illus1;
+}
+@font-face {
+    font-family: "illus2";
+    src: url(../Fonts/illus2.ttf);
+}
+.illus2{
+    font-family: illus2;
+}
+@font-face {
+    font-family: "illus3";
+    src: url(../Fonts/illus3.ttf);
+}
+.illus3{
+    font-family: illus3;
+}
+@font-face {
+    font-family: "section1";
+    src: url(../Fonts/section1.ttf);
+}
+.section1{
+    font-family: section1;
+}
+
+
+/*關於 Summary */
+
+.s-hr1{
+	margin: 1.0em -3em -1px -3em;
+	border-top: solid 2px #000;
+	line-height: 1em;
+}
+.s-hr2{
+	margin: 11px -3em -0.5em -3em;
+	border-top: solid 2px #000;
+	line-height: 1em;
+}
+.summary {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	text-indent: 0em;
+	font-family: "DK-SYMBOL";
+}
+.renwu {
+	margin-bottom:-0.6em;
+	text-indent: 0em;
+	text-align: center;
+	font-size: 1.4em;
+}
+
+
+/*以下填寫自定義css樣式*/
+
+.fr{
+	float:right;
+}
+.fl{
+	float:left;
+}
+.vt{
+	vertical-align: top;
+}
+.vb{
+	vertical-align: bottom;
+}
+.vm{
+	vertical-align: middle;
+}
+.bs{
+	border-spacing:0;
+}
+.bc{
+	border-collapse: collapse;
+	line-height: 1em;
+}
+.lh{
+	line-height: 1em;
+}
+.lh1{
+	line-height: 1.1em;
+}
+.lh2{
+	line-height: 1.26em;
+}
+.t-lt{
+	text-decoration:line-through;
+}
+.pius1 {
+	text-indent: 0em;
+	line-height: 1.1em;
+    font-weight: bold;
+	margin: 2em 0 2em 1.7em;
+	font-size: 1.2em;
+    font-family: illus1;
+}
+.biaoti1 {
+    font-size: 1.2em;
+    margin-left: 2em;
+    font-weight: bold;
+	font-family: title2;
+}
+.biaoti2 {
+    font-size: 1.2em;
+    margin-left: 2em;
+    font-weight: bold;
+	font-family: title;	
+}
+.rotate1 {  
+   -webkit-transform: rotate(90deg);
+   transform: rotate(90deg);    
+}
+.symbol{
+	font-family: "DK-SYMBOL";
+}
+.cof{
+	text-shadow: 0px 0px 3px #FFF;
+}
+.tbg1{
+	color: #FFF;
+	text-shadow: 0px 0px 3px #0096c2;
+}
+.tco1{
+	color: #751345;
+}
+.tco2{
+	color: #7C0F4A;
+}
+.tco3{
+	color: #850E4D;
+}
+.tco4{
+	color: #8D0E4D;
+}
+.tco5{
+	color: #FFF;
+	text-shadow: 0px 0px 3px #000;
+}
+.tco6{
+	color: #EB3638;
+	text-shadow: 0px 0px 3px #FFF;
+}
+.tco7{
+	text-shadow: 0px 0px 3px #FFF;
+}
+.tbox1{
+	color: #6db5ff;
+	background-color: #0096c2;
+	width: 1em;
+	padding :2px 2px 3em 12px;
+}
+.ibox1 {
+	border: 3px solid #000;
+	color: #000;
+	background-color: #FFF;
+    text-indent: 0em;
+	width: 16.5em;
+}
+.icof{
+	color: #FFF;
+}
+.ico1{
+	color: #137066;
+}
+.ico2{
+	background-color: #412D24;
+	padding: 10px 0;
+}
+.ico3{
+	background-color: #605D64;
+	padding: 0 10px;
+}
+.iside1{
+	color: #000;
+}
+.iside2{
+	color: #6D7675;
+}
+.iside3{
+	color: #444444;
+}
+.iside4{
+	color: #212121;
+}
+.bg1{
+	background-color: #000;
+	color: #FFF;
+}
+.ain-box1{
+	color: #FFF;
+	padding: 5px;
+	margin: 0.2em auto 0 auto;
+}
+
+/*
+.imapbg{
+	background-color:#C28C60;
+}
+.ipeo{
+	background-color:#9254A1;
+	padding:1px;
+}
+.iyw{
+	background-color:#F8BE10;
+	padding:2px;	
+}
+.iblue1{
+	background-color:#3E52A9;
+	padding:1em;	
+}
+.iblue2{
+	background-color:#3E52A9;
+	padding:2px 2.95em;	
+}
+.iblue3{
+	background-color:#3E52A9;
+	padding:2px;	
+}
+.iblue4{
+	background-color:#3E52A9;
+	padding:2px 0.9em;	
+}
+*/
+
+.imapbg{
+	background-color: #C28C60;
+}
+.ipeo{
+	background-color: #9254A1;
+	padding: 1px;
+}
+.iyw{
+	background-color: #F8BE10;
+	padding: 2px;	
+}
+.iblue1{
+	background-color: #3E52A9;
+	padding: 1em;	
+}
+.iblue2{
+	background-color: #3E52A9;
+	padding: 2px 2.95em;	
+}
+.iblue3{
+	background-color: #3E52A9;
+	padding: 2px;	
+}
+.iblue4{
+	background-color: #3E52A9;
+	padding: 2px 0.9em;	
+}
+.iblue5{
+	background-color: #3E52A9;
+	padding: 2px 2.45em;	
+}
+.iblue6{
+	background-color: #3E52A9;
+	padding: 2px 5px;	
+}
+.iblue7{
+	background-color: #3E52A9;
+	padding: 2px 3px;	
+}
+.iblue8{
+	background-color: #3E52A9;
+	padding: 2px 10px;	
+}
+.iblue9{
+	background-color: #3E52A9;
+	padding: 2px 3.7em;	
+}
+.iblue10{
+	background-color: #3E52A9;
+	padding: 2px 0.8em;	
+}

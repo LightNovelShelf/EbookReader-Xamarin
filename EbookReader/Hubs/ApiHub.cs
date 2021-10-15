@@ -145,7 +145,7 @@ namespace EbookReader.Hubs
                 var relaPath = Path.GetRelativePath(KestrelWebHost.Server.Root, cacheDir);
 
                 if (isDev) return MessageHelp.Success(new[] { $"http://127.0.0.1:{KestrelWebHost.Server.Port}/{relaPath}/{md5}/{opfPath}", md5 });
-                return MessageHelp.Success(new[] { opfPath, md5 });
+                return MessageHelp.Success(new[] { $"{cacheDir}/{md5}/{opfPath}", md5 });
             }
             catch (Exception e)
             {

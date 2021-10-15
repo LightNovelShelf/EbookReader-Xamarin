@@ -80,9 +80,6 @@
     <Compile Include="Util\Util.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Web\fonts\FiraCode-Regular.ea8e3416.woff2" />
-    <AndroidAsset Include="Assets\Web\fonts\LatoLatin-Regular.3cd36578.woff2" />
-    <AndroidAsset Include="Assets\Web\fonts\LatoLatin-Semibold.008763cc.woff2" />
     <AndroidAsset Include="Assets\Web\Test2\mimetype" />
     <AndroidAsset Include="Assets\Web\Test2\OEBPS\content.opf" />
     <AndroidAsset Include="Assets\Web\Test2\OEBPS\toc.ncx" />
@@ -119,6 +116,9 @@
     <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\Section012.xhtml" />
     <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\summary.xhtml" />
     <AndroidAsset Include="Assets\Web\Test2\OEBPS\Text\title.xhtml" />
+    <AndroidAsset Include="Assets\Web\fonts\FiraCode-Regular.ea8e3416.woff2" />
+    <AndroidAsset Include="Assets\Web\fonts\LatoLatin-Regular.3cd36578.woff2" />
+    <AndroidAsset Include="Assets\Web\fonts\LatoLatin-Semibold.008763cc.woff2" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
@@ -180,57 +180,6 @@
       <Project>{37279059-3533-4128-853d-1271c33cdc39}</Project>
       <Name>Wuyu.Epub</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Web\css\app.724b710a.css" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Web\css\chunk-271b60d6.7ce6bdfb.css" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Web\css\chunk-5576d9ba.a13472a6.css" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Web\css\chunk-e61e036a.a13472a6.css" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Web\css\chunk-vendors.b0c17f3f.css" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Web\js\app-legacy.7a9fa573.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Web\js\app.3e8cbd33.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Web\js\chunk-271b60d6-legacy.01cc4562.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Web\js\chunk-271b60d6.d3e37b41.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Web\js\chunk-2d0be2df-legacy.e34370b5.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Web\js\chunk-2d0be2df.e34370b5.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Web\js\chunk-2d21a3d2-legacy.d6e1d9bd.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Web\js\chunk-2d21a3d2.9f2eec5d.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Web\js\chunk-5576d9ba.df513231.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Web\js\chunk-e61e036a-legacy.7d9c5209.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Web\js\chunk-vendors-legacy.27a55cbd.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Web\js\chunk-vendors.c0994db2.js" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Web\Test2\META-INF\container.xml" />
@@ -315,6 +264,57 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Web\robots.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\css\app.724b710a.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\css\chunk-271b60d6.7ce6bdfb.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\css\chunk-5576d9ba.a13472a6.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\css\chunk-e61e036a.a13472a6.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\css\chunk-vendors.b0c17f3f.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\app-legacy.da8f865d.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\app.91162d52.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-271b60d6-legacy.01cc4562.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-271b60d6.d3e37b41.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-2d0be2df-legacy.e34370b5.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-2d0be2df.e34370b5.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-2d21a3d2-legacy.d6e1d9bd.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-2d21a3d2.9f2eec5d.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-5576d9ba.a3bca145.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-e61e036a-legacy.c38ca68d.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-vendors-legacy.27a55cbd.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Web\js\chunk-vendors.c0994db2.js" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

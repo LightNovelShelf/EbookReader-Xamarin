@@ -186,10 +186,10 @@
     <AndroidAsset Include="Assets\Web\css\app.466d27bd.css" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Web\css\chunk-3ad5675f.e72d5bc5.css" />
+    <AndroidAsset Include="Assets\Web\css\chunk-6dacc420.2a87692d.css" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Web\css\chunk-3bc245cc.e72d5bc5.css" />
+    <AndroidAsset Include="Assets\Web\css\chunk-6dd12c65.2a87692d.css" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Web\css\chunk-c48ec6f4.8ccd2c0b.css" />
@@ -201,10 +201,10 @@
     <AndroidAsset Include="Assets\Web\img\loading.a011d4ea.svg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Web\js\app-legacy.f2e17e34.js" />
+    <AndroidAsset Include="Assets\Web\js\app-legacy.89c32446.js" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Web\js\app.3cd47e72.js" />
+    <AndroidAsset Include="Assets\Web\js\app.10a0a8b0.js" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Web\js\chunk-2d0be2df-legacy.724d4708.js" />
@@ -219,10 +219,10 @@
     <AndroidAsset Include="Assets\Web\js\chunk-2d21a3d2.7054e27e.js" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Web\js\chunk-3ad5675f-legacy.a99321e0.js" />
+    <AndroidAsset Include="Assets\Web\js\chunk-6dacc420.c158c645.js" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Web\js\chunk-3bc245cc.b2c16582.js" />
+    <AndroidAsset Include="Assets\Web\js\chunk-6dd12c65-legacy.f1d9bcbb.js" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Web\js\chunk-c48ec6f4-legacy.32ee68fe.js" />

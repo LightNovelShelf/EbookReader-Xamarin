@@ -5,15 +5,21 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Provider;
 using Android.Runtime;
+using Android.Util;
 using Android.Views;
 using Android.Webkit;
+using Android.Widget;
 using AndroidX.AppCompat.App;
 using AndroidX.Core.App;
 using AndroidX.Core.Content;
+using System;
 
 namespace EbookReader
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [IntentFilter(new[] { Intent.ActionView },
+        Categories = new[] { Intent.CategoryBrowsable, Intent.CategoryDefault }, DataSchemes = new[] { "file", "content" },
+        DataMimeType = "application/epub+zip")]
     public class MainActivity : AppCompatActivity
     {
         public static Activity Activity;
@@ -47,8 +53,34 @@ namespace EbookReader
             //WebView.SetWebViewClient(new MyWebViewClient());
             //WebView.SetWebChromeClient(new MyWebChromeClient(this));
 
-            //WebView.LoadUrl("http://10.0.2.2:8080");
-            WebView.LoadUrl($"file:///android_asset/Web/index.html");
+            //const string url = "http://10.0.2.2:8081/";
+            const string url = "file:///android_asset/Web/index.html";
+            if (Intent?.Data != null)
+            {
+                WebView.LoadUrl($"{url}#/read/indent");
+            }
+            else
+            {
+                WebView.LoadUrl(url);
+            }
+        }
+
+        private void TakePersistableUriPermission(Intent intent)
+        {
+            if (intent.Data != null)
+            {
+                var flags = intent.Flags &
+                            (ActivityFlags.GrantReadUriPermission | ActivityFlags.GrantWriteUriPermission);
+                try
+                {
+                    ContentResolver?.TakePersistableUriPermission(intent.Data, flags);
+                }
+                catch (Exception e)
+                {
+                    Toast.MakeText(this, e.Message, ToastLength.Short).Show();
+                    Log.Warn("TakePersistableUriPermission", e.Message);
+                }
+            }
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -73,7 +105,7 @@ namespace EbookReader
 
             if (Build.VERSION.SdkInt > BuildVersionCodes.Q)
             {
-                if (!Environment.IsExternalStorageManager)
+                if (!Android.OS.Environment.IsExternalStorageManager)
                 {
                     var callIntent = new Intent(Settings.ActionManageAllFilesAccessPermission);
                     StartActivity(callIntent);

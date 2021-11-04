@@ -1,9 +1,12 @@
 ﻿using Android.Graphics;
+using Android.Provider;
 using Android.Widget;
 using EbookReader.Models;
 using EbookReader.Models.Result;
 using Microsoft.AspNetCore.SignalR;
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
@@ -17,6 +20,9 @@ namespace EbookReader.Hubs
 {
     class ApiHub : Hub
     {
+        // TODO 把这玩意缓存起来
+        static Dictionary<string, string> dic = new Dictionary<string, string>();
+
         // 弹出提示
         public MessageModel ShowToast(string str)
         {
@@ -103,10 +109,12 @@ namespace EbookReader.Hubs
         {
             try
             {
-                var md5 = GetMD5HashFromFile(path);
+                using var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
+                var md5 = GetMD5HashFromStream(stream);
+                stream.Seek(0, SeekOrigin.Begin);
                 //var md5 = path.Md5();
                 using var ms = new MemoryStream();
-                using var epub = EpubBook.ReadEpub(path, ms);
+                using var epub = EpubBook.ReadEpub(stream, ms);
                 using var coverStream = epub.GetItemStreamByID(epub.Cover);
                 using var image = BitmapFactory.DecodeStream(coverStream);
                 var coverPath = MainActivity.Activity.GetExternalFilesDir("image").AbsolutePath + "/" + md5;
@@ -136,9 +144,51 @@ namespace EbookReader.Hubs
             try
             {
                 var cacheDir = MainActivity.Activity.ExternalCacheDir.AbsolutePath;
-                var md5 = GetMD5HashFromFile(path);
+                string md5;
+                var fileInfo = new FileInfo(path);
+                var key = $"{fileInfo.Length}_{fileInfo.LastWriteTimeUtc}";
+                if (dic.ContainsKey(key)) md5 = dic[key];
+                else
+                {
+                    md5 = GetMD5HashFromFile(path);
+                    dic[key] = md5;
+                }
                 //var md5 = path.Md5();
                 ZipFile.ExtractToDirectory(path, $"{cacheDir}/{md5}", true);
+
+                var text = await File.ReadAllTextAsync($"{cacheDir}/{md5}/META-INF/container.xml");
+                var opfPath = Regex.Match(text, "full-path=\"(.*?)\"").Groups[1].Value;
+                var relaPath = Path.GetRelativePath(KestrelWebHost.Server.Root, cacheDir);
+                
+                if (isDev) return MessageHelp.Success(new[] { $"http://127.0.0.1:{KestrelWebHost.Server.Port}/{relaPath}/{md5}/{opfPath}", md5 });
+                return MessageHelp.Success(new[] { $"{cacheDir}/{md5}/{opfPath}", md5 });
+            }
+            catch (Exception e)
+            {
+                return MessageHelp.Error<string[]>(e.Message);
+            }
+        }
+
+        public async Task<MessageModel<string[]>> GetIndentFile(bool isDev)
+        {
+            try
+            {
+                if (MainActivity.Activity.Intent?.Data == null) return MessageHelp.Error<string[]>("no data"); ;
+
+                using var stream = MainActivity.Activity.ContentResolver.OpenInputStream(MainActivity.Activity.Intent.Data);
+
+                var cacheDir = MainActivity.Activity.ExternalCacheDir.AbsolutePath;
+                string md5;
+                var key = MainActivity.Activity.Intent.DataString;
+                if (dic.ContainsKey(key)) md5 = dic[key];
+                else
+                {
+                    md5 = GetMD5HashFromStream(stream);
+                    dic[key] = md5;
+                }
+                //var md5 = path.Md5();
+                var zipFile = new ZipArchive(stream);
+                zipFile.ExtractToDirectory($"{cacheDir}/{md5}", true);
 
                 var text = await File.ReadAllTextAsync($"{cacheDir}/{md5}/META-INF/container.xml");
                 var opfPath = Regex.Match(text, "full-path=\"(.*?)\"").Groups[1].Value;
@@ -152,6 +202,7 @@ namespace EbookReader.Hubs
                 return MessageHelp.Error<string[]>(e.Message);
             }
         }
+
 
         // 扫描Epub并调用Api添加到书架中
         public async Task<MessageModel> ScanEpub(string path)

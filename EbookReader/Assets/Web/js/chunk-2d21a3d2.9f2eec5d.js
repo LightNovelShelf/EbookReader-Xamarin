@@ -1,1 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d21a3d2"],{bb51:function(e,n,t){"use strict";t.r(n);var c=t("7a23");function r(e,n,t,r,o,u){const b=Object(c["R"])("router-view");return Object(c["H"])(),Object(c["i"])(b)}var o=Object(c["o"])({name:"Home",setup(){return{}}}),u=t("6b0d"),b=t.n(u);const a=b()(o,[["render",r]]);n["default"]=a}}]);

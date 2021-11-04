@@ -43,6 +43,26 @@ namespace EbookReader.Util
             }
         }
 
+        public static string GetMD5HashFromStream(Stream stream)
+        {
+            try
+            {
+                MD5 md5 = new MD5CryptoServiceProvider();
+                byte[] retVal = md5.ComputeHash(stream);
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < retVal.Length; i++)
+                {
+                    sb.Append(retVal[i].ToString("x2"));
+                }
+                return sb.ToString();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("GetMD5HashFromFile() fail,error:" + ex.Message);
+            }
+        }
+
+
         /// <summary>
         /// 取字符串md5
         /// </summary>
